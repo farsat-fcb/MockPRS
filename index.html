@@ -3,12 +3,13 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="description" content="None" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="description" content="None" /><meta name="author" content="Tade Souaiaia" />
       <link rel="shortcut icon" href="img/favicon.ico" />
-    <title>MockPRS</title>
+    <title>BridgePRS</title>
     <link rel="stylesheet" href="css/theme.css" />
     <link rel="stylesheet" href="css/theme_extra.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="css/extra.css" rel="stylesheet" />
+        <link href="css/style.css" rel="stylesheet" />
     
       <script>
         // Current page data
@@ -19,9 +20,7 @@
     
     <!--[if lt IE 9]>
       <script src="js/html5shiv.min.js"></script>
-    <![endif]-->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-      <script>hljs.highlightAll();</script> 
+    <![endif]--> 
 </head>
 
 <body class="wy-body-for-nav" role="document">
@@ -30,7 +29,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-          <a href="." class="icon icon-home"> MockPRS
+          <a href="." class="icon icon-home"> BridgePRS
         </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
       <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
@@ -45,9 +44,49 @@
     </ul>
                 </li>
               </ul>
+              <p class="caption"><span class="caption-text">Requirements</span></p>
               <ul>
-                <li class="toctree-l1"><a class="" href="about.md">About</a>
-                </li>
+                  <li class="toctree-l1"><a class="reference internal" href="req_system/">System</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="req_software/">Software</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="req_mac/">Mac Specific</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Quick start tutorial</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="quikstart_demo/">Demo Run</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="quikstart_result/">Demo Result</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Guide</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="guide_background/">Background</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="guide_commands/">Commands</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="guide_input/">Input Data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="guide_output/">Output Data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="guide_usecases/">Use Cases</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="guide_args/">All Arguments</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="guide_customization/">Customization</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="guide_shell/">Using Bash</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Misc</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="misc_faq/">Frequently Asked Questions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="misc_downloads/">Direct Downloads</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="misc_log/">Update Log</a>
+                  </li>
               </ul>
       </div>
     </div>
@@ -56,7 +95,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
       <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href=".">MockPRS</a>
+          <a href=".">BridgePRS</a>
         
       </nav>
       <div class="wy-nav-content">
@@ -65,6 +104,7 @@
     <li><a href="." class="icon icon-home" aria-label="Docs"></a></li>
       <li class="breadcrumb-item active">Home</li>
     <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/tadesouaiaia/BridgePRS-website/edit/master/docs/index.md" class="icon icon-github"> Edit on GitHub</a>
     </li>
   </ul>
   <hr/>
@@ -72,10 +112,115 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="bridgeprs">BridgePRS</h1>
+                <p><img alt="Screenshot" src="img/fat_logo.png" /> </p>
+<p>BridgePRS is a <strong>Bayesian</strong> method that utilises <strong>ridge</strong> regression
+developed to tackle the "<strong>PRS</strong> Portability Problem".  The PRS
+portability problem causes lower PRS accuracy in target populations
+not included in the GWAS base used to estimate the PRS. This is due to
+differences in linkage disequilibrium (LD), allele frequency and
+gene–environment interactions affecting causal effect sizes between
+the base and target populations.</p>
+<!--
+| Operating System | Link | Notes | 
+| -----------------|:----------:|:----:| 
+| Linux  64-bit | [v1.0.2](https://github.com/clivehoggart/BridgePRS/archive/refs/heads/main.zip) | Updated 7-12-2024 |  
+| Mac  64-bit   | [v1.0.2](https://github.com/clivehoggart/BridgePRS/archive/refs/heads/main.zip) | Updated 6-27-2024 | 
+| Windows       | NA     | Not Available | 
+
+# Reference Panels 
+| Source | Link | Notes | 
+| -----------------|:----------:|:----:| 
+| HapMap | [v1.0.2](https://github.com/clivehoggart/BridgePRS/archive/refs/heads/main.zip) | Updated 7-12-2024 |  
+| 1000G_   | [v1.0.2](https://github.com/clivehoggart/BridgePRS/archive/refs/heads/main.zip) | Updated 6-27-2024 | 
+| Windows       | NA     | Not Available | 
+| 1000G Ref Panel | [1000G_ref.tar.gz](https://drive.google.com/file/d/1djAEwRiQsh4veinSLHO3laGjNF95vvN9/view?usp=drive_link) | Optional (Unzip into data directory to use) |    
+| 1000G Ref Panel | [1000G_ref.tar.gz](https://drive.google.com/file/d/1djAEwRiQsh4veinSLHO3laGjNF95vvN9/view?usp=drive_link) | Optional (Unzip into data directory to use) |    
+-->
+
+<h1 id="download-links">Download Links</h1>
+<table>
+<thead>
+<tr>
+<th>BridgePRS Software Packages</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><table> <tr><th> OS </th><th> Link </th><th> Last Updated  </th></tr>  <tr><td> Linux 64-Bit </td><td> <a href="https://github.com/clivehoggart/BridgePRS/archive/refs/heads/main.zip">v1.0.3</a> </td><td> 9-13-2024 </td></tr>  </th></tr>  <tr><td> Mac 64-Bit </td><td> <a href="https://github.com/clivehoggart/BridgePRS/archive/refs/heads/main.zip">v1.0.3</a> </td><td> 9-10-2024 </td></tr> </th></tr>  <tr><td> Windows </td><td> NA </td><td> Not Available </td></tr> </table></td>
+</tr>
+</tbody>
+</table>
+<p>1000G genotype data from the five super-populations (AFR, AMR,
+EAS, EUR, SAS) is provided to estimate LD in BridgePRS analyses for
+three SNP sets: HapMap Variants, 1000G variants with MAF&gt;5% in any one
+of the five 1000G super-populations, 1000G variants with MAF&gt;1% in one
+any of the five 1000G super-populations:
+|Reference Panels |
+|--| 
+| <table> <tr><th> Download Link  </th><th> Size </th><th> More Information </th></tr><tr><td> <a href="https://drive.google.com/file/d/1D0ZtPrvkvznKfHjlwo6BkYIvWFIRF_9g/view?usp=drive_link">HapMap Variants</a> </td><td> &lt;1GB </td><td> <a href="https://www.genome.gov/10001688/international-hapmap-project">International HapMap Project</a> </td></tr>  </th></tr>  <tr><td> <a href="https://drive.google.com/file/d/1c3BamSz1JpXr0QQIfyI_1nUfe0SRNXKa/view?usp=drive_link">1000 Genomes: MAF&gt;5%</a> </td><td> 8GB </td><td> <a href="https://www.internationalgenome.org/">IGSR Website</a> </td></tr> </th></tr>  </td><td> <a href="https://drive.google.com/file/d/18xgsyDymbjeSOv1QS2ULQFaru5NVjwGR/view?usp=drive_link">1000 Genomes: MAF&gt;1%</a> </td><td> 14GB </td><td> <a href="https://www.internationalgenome.org/">IGSR Website</a> </td></tr> </table> </p>
+<p><a href="misc_downloads/"><strong>Trouble Downloading Ref Panels?</strong></a> </p>
+<!--
+|BridgePRS Packages |Reference Panels|
+|--|--|
+|<table> <tr><th> OS </th><th> Link </th><th> Last Update  </th></tr>  <tr><td> Linux 64-Bit </td><td> [v1.0.3](https://github.com/clivehoggart/BridgePRS/archive/refs/heads/main.zip) </td><td> 9-13-2024 </td></tr>  </th></tr>  <tr><td> Mac 64-Bit </td><td> [v1.0.3](https://github.com/clivehoggart/BridgePRS/archive/refs/heads/main.zip) </td><td> 9-10-2024 </td></tr> </th></tr>  <tr><td> Windows </td><td> NA </td><td> Not Available </td></tr> </table> | <table> <tr><th> Download Link  </th><th> Size </th><th> More Information </th></tr><tr><td> [HapMap Variants](https://drive.google.com/file/d/1D0ZtPrvkvznKfHjlwo6BkYIvWFIRF_9g/view?usp=drive_link) </td><td> <1GB </td><td> [International HapMap Project](https://www.genome.gov/10001688/international-hapmap-project) </td></tr>  </th></tr>  <tr><td> [1000 Genomes Variants: MAF>5%](https://drive.google.com/file/d/1c3BamSz1JpXr0QQIfyI_1nUfe0SRNXKa/view?usp=drive_link) </td><td> 8GB </td><td> [International Genome Sample Resource](https://www.internationalgenome.org/) </td></tr> </th></tr>  </td><td> [1000 Genomes variants: MAF>1%](https://drive.google.com/file/d/18xgsyDymbjeSOv1QS2ULQFaru5NVjwGR/view?usp=drive_link) </td><td> 14GB </td><td> [International Genome Sample Resource](https://www.internationalgenome.org/) </td></tr> </table> 
+[**Trouble Downloading Ref Panels?**](misc_downloads.md) 
+-->
+
+<!--
+|BridgePRS Package |Reference Panels|
+|--|--|
+|<table> <tr><th> OS </th><th> Link </th><th> Last Update  </th></tr>  <tr><td> Linux 64-Bit 
+</td><td> [v1.0.3](https://github.com/clivehoggart/BridgePRS/archive/refs/heads/main.zip) 
+</td><td> 7-12-2024 </td></tr>  </th></tr>  <tr><td> Mac 64-Bit 
+</td><td> [v1.0.3](https://github.com/clivehoggart/BridgePRS/archive/refs/heads/main.zip) 
+</td><td> 6-16-2024 
+</td></tr> </th></tr>  <tr><td> Windows </td><td> NA </td><td> Not Available </td></tr> </table>       
+| <table> <tr><th>Source</th><th>Link  </th><th> Notes </th></tr><tr><td> HapMap </td><td> [v1.0.3](https://github.com/clivehoggart/BridgePRS/archive/refs/heads/main.zip) 
+</td><td> Cool </td></tr>  </th></tr>  <tr><td> 1k Genomes </td><td> [v1.0.3](https://github.com/clivehoggart/BridgePRS/archive/refs/heads/main.zip) 
+</td><td> Cool </td></tr> </th></tr>  <tr><td> Windows </td><td> [v1.0.03](www.google.com) 
+</td><td> Cool </td></tr> </table>     
+-->
+
+<div class="admonition note">
+<p class="admonition-title">Latest Updates</p>
+<h1 id="2024-11-02-v017">2024-11-02 (v0.1.7)</h1>
+<ul>
+<li>Added a <a href="misc_downloads/">direct downloads page</a> for users who have trouble downloading large reference panels.  </li>
+<li>Added sample thousand genomes data. </li>
+<li>update log can be found <a href="misc_log/">here</a></li>
+</ul>
+</div>
+<h1 id="overview">Overview</h1>
+<ul>
+<li>BridgePRS is written in R with a Python
+  wrapper. <a href="https://www.cog-genomics.org/software">Plink.</a> is used in
+  the first stage of the modelling for clumping and thresholding (all
+  markers within clumps are retained for analysis).
+  For more information on installing dependencies, please refer to <a href="req_software/">Requirements</a>. </li>
+<li>To get BridgePRS running using toy data see our <a href="quikstart_demo/">Quick Start Tutorial.</a>.</li>
+<li>Following the Quick Start, the full guide provides more <a href="guide_usecases/">realistic examples</a> to help you get started with your own data. </li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Citation: Our Manuscript is published in Nature Genetics</p>
+<p>Please cite our <a href="https://www.nature.com/articles/s41588-023-01583-9">paper</a>: </p>
+<p>Hoggart C, Choi SW, García-González J, Souaiaia T, Preuss M, O'Reilly P. BridgePRS leverages shared genetic effects across ancestries to increase polygenic risk score portability. Nat Genet 56, 180–186 (2024).
+https://doi.org/10.1038/s41588-023-01583-9</p>
+</div>
+<h2 id="contact">Contact</h2>
+<p>For questions about the methodology, this website, or our manuscript
+please contact <a href="http://www.pauloreilly.info/">Dr Clive Hoggart</a>, <a href="mailto:tade.souaiaia@gmail.com">Dr
+Tade Souaiaia</a>, or <a href="http://www.pauloreilly.info/">Dr Paul
+O'Reilly</a>.  For source code and coding
+issues please visit the bridgePRS github
+<a href="https://github.com/clivehoggart/BridgePRS">here</a>.</p>
+<h2 id="acknowledgements">Acknowledgements</h2>
+<p>We would like to thank Brian Fulton-Howard for his feedback and help with testing. </p>
               
             </div>
           </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="req_system/" class="btn btn-neutral float-right" title="System">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
 
   <hr/>
 
@@ -96,7 +241,13 @@
   <div class="rst-versions" role="note" aria-label="Versions">
   <span class="rst-current-version" data-toggle="rst-current-version">
     
+        <span>
+          <a href="https://github.com/tadesouaiaia/BridgePRS-website" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
     
+    
+    
+      <span><a href="req_system/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
@@ -104,6 +255,8 @@
     <script>var base_url = ".";</script>
     <script src="js/theme_extra.js"></script>
     <script src="js/theme.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      <script src="javascripts/details.js"></script>
       <script src="search/main.js"></script>
     <script>
         jQuery(function () {
@@ -116,5 +269,5 @@
 
 <!--
 MkDocs version : 1.6.1
-Build Date UTC : 2025-06-30 18:35:53.555693+00:00
+Build Date UTC : 2025-07-02 21:03:17.697326+00:00
 -->
